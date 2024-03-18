@@ -1,0 +1,44 @@
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+// The dot blink
+void dot() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(250); 
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(250); 
+}
+// The dash blink
+void dash() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(750); 
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(250); 
+}
+// More Delays
+void letterGap() {
+  delay(750); 
+}
+
+void loop() {
+  //  A: .-
+  dot(); dash(); letterGap();
+
+  //  N: -.
+  dash(); dot(); letterGap();
+
+  //  D: -..
+  dash(); dot(); dot(); letterGap();
+
+  //  R: .-.
+  dot(); dash(); dot(); letterGap();
+
+  //  E: .
+  dot(); letterGap();
+
+  //  I: ..
+  dot(); dot(); letterGap();
+
+  // 7 sec delay
+  delay(7000); 
+}
